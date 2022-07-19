@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="schoolAdminStructured" tests="5" errors="0" failures="0" skipped="0" time="0.101" timestamp="2022-07-19T13:52:03.777000">
+<testcase classname="schoolAdminStructured" name="TC1. Creating a school" time="0.008">
+</testcase>
+<testcase classname="schoolAdminStructured" name="TC2.Creating and adding students to the school" time="0.014">
+</testcase>
+<testcase classname="schoolAdminStructured" name="TC3.Creating and adding teachers to school" time="0.013">
+</testcase>
+<testcase classname="schoolAdminStructured" name="TC4.Removing a student from the school" time="0.015">
+</testcase>
+<testcase classname="schoolAdminStructured" name="TC5.Removing a teacher from the school" time="0.013">
+</testcase>
+</testsuite>

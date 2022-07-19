@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.7 on win32)" generated="20220719 13:52:03.774" rpa="false" schemaversion="3">
+<suite id="s1" name="schoolAdminStructured" source="C:\Users\NigamAr\Desktop\python test tasks\RobotFramework\Automation\schoolAdminStructured.robot">
+<test id="s1-t1" name="TC1. Creating a school" line="18">
+<kw name="Start Testing" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing begins</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.811" endtime="20220719 13:52:03.811"/>
+</kw>
+<kw name="create school" library="School">
+<var>${school}</var>
+<arg>Children's Academy</arg>
+<msg timestamp="20220719 13:52:03.812" level="INFO">${school} = &lt;School.School object at 0x00000203B7B30348&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.811" endtime="20220719 13:52:03.812"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${school.schoolName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.812" endtime="20220719 13:52:03.813"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.810" endtime="20220719 13:52:03.813"/>
+</kw>
+<kw name="build school" library="resourceForSAS">
+<var>${school}</var>
+<arg>Children's Academy</arg>
+<kw name="create school" library="School">
+<var>${school}</var>
+<arg>${schoolName}</arg>
+<msg timestamp="20220719 13:52:03.814" level="INFO">${school} = &lt;School.School object at 0x00000203B7B30348&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.814" endtime="20220719 13:52:03.814"/>
+</kw>
+<msg timestamp="20220719 13:52:03.814" level="INFO">${school} = &lt;School.School object at 0x00000203B7B30348&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.813" endtime="20220719 13:52:03.814"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${school}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220719 13:52:03.815" level="INFO">${school} = &lt;School.School object at 0x00000203B7B30348&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.815" endtime="20220719 13:52:03.815"/>
+</kw>
+<kw name="End Testing" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing ends</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.816" endtime="20220719 13:52:03.816"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.816" endtime="20220719 13:52:03.816"/>
+</kw>
+<doc>with the help of this test case we would check if we can create a school succesfully</doc>
+<tag>CREATION</tag>
+<status status="PASS" starttime="20220719 13:52:03.809" endtime="20220719 13:52:03.817"/>
+</test>
+<test id="s1-t2" name="TC2.Creating and adding students to the school" line="25">
+<kw name="Start Testing" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing begins</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.819" endtime="20220719 13:52:03.819"/>
+</kw>
+<kw name="create school" library="School">
+<var>${school}</var>
+<arg>Children's Academy</arg>
+<msg timestamp="20220719 13:52:03.820" level="INFO">${school} = &lt;School.School object at 0x00000203B7B48E08&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.820" endtime="20220719 13:52:03.820"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${school.schoolName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.820" endtime="20220719 13:52:03.821"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.819" endtime="20220719 13:52:03.821"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n school :\t ${school.studentList} ${school.teacherList} ${school.schoolName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.821" endtime="20220719 13:52:03.823"/>
+</kw>
+<kw name="Create Student" library="Student">
+<var>${student1}</var>
+<arg>1</arg>
+<arg>Aryant Nigam</arg>
+<arg>12</arg>
+<msg timestamp="20220719 13:52:03.824" level="INFO">${student1} = &lt;Student.Student object at 0x00000203B7B4C888&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.824" endtime="20220719 13:52:03.824"/>
+</kw>
+<kw name="Create Student" library="Student">
+<var>${student2}</var>
+<arg>2</arg>
+<arg>Ankit Kumar</arg>
+<arg>12</arg>
+<msg timestamp="20220719 13:52:03.825" level="INFO">${student2} = &lt;Student.Student object at 0x00000203B7B4C148&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.824" endtime="20220719 13:52:03.825"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${student1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220719 13:52:03.825" level="INFO">${student1} = &lt;Student.Student object at 0x00000203B7B4C888&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.825" endtime="20220719 13:52:03.825"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${student2}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220719 13:52:03.827" level="INFO">${student2} = &lt;Student.Student object at 0x00000203B7B4C148&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.826" endtime="20220719 13:52:03.827"/>
+</kw>
+<kw name="log student to console" library="Student">
+<arg>${student1}</arg>
+<status status="PASS" starttime="20220719 13:52:03.827" endtime="20220719 13:52:03.828"/>
+</kw>
+<kw name="log student to console" library="Student">
+<arg>${student2}</arg>
+<status status="PASS" starttime="20220719 13:52:03.828" endtime="20220719 13:52:03.829"/>
+</kw>
+<kw name="admit student" library="School">
+<arg>${school}</arg>
+<arg>${student1}</arg>
+<status status="PASS" starttime="20220719 13:52:03.829" endtime="20220719 13:52:03.830"/>
+</kw>
+<kw name="admit student" library="School">
+<arg>${school}</arg>
+<arg>${student2}</arg>
+<status status="PASS" starttime="20220719 13:52:03.830" endtime="20220719 13:52:03.831"/>
+</kw>
+<kw name="End Testing" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing ends</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.831" endtime="20220719 13:52:03.832"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.831" endtime="20220719 13:52:03.832"/>
+</kw>
+<doc>with the help of this test case we would check if we can create and add students to the school succesfully</doc>
+<tag>CREATION</tag>
+<status status="PASS" starttime="20220719 13:52:03.818" endtime="20220719 13:52:03.832"/>
+</test>
+<test id="s1-t3" name="TC3.Creating and adding teachers to school" line="41">
+<kw name="Start Testing" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing begins</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.834" endtime="20220719 13:52:03.835"/>
+</kw>
+<kw name="create school" library="School">
+<var>${school}</var>
+<arg>Children's Academy</arg>
+<msg timestamp="20220719 13:52:03.835" level="INFO">${school} = &lt;School.School object at 0x00000203B7B30A88&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.835" endtime="20220719 13:52:03.835"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${school.schoolName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.835" endtime="20220719 13:52:03.836"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.834" endtime="20220719 13:52:03.836"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${subjectListA}</var>
+<arg>Biology</arg>
+<arg>Chemistry</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220719 13:52:03.837" level="INFO">${subjectListA} = ['Biology', 'Chemistry']</msg>
+<status status="PASS" starttime="20220719 13:52:03.837" endtime="20220719 13:52:03.837"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${subjectListB}</var>
+<arg>Maths</arg>
+<arg>Physics</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220719 13:52:03.838" level="INFO">${subjectListB} = ['Maths', 'Physics']</msg>
+<status status="PASS" starttime="20220719 13:52:03.837" endtime="20220719 13:52:03.838"/>
+</kw>
+<kw name="Create Teacher" library="Teacher">
+<var>${teacher1}</var>
+<arg>T1</arg>
+<arg>Preeti Yadav</arg>
+<arg>${subjectListA}</arg>
+<msg timestamp="20220719 13:52:03.838" level="INFO">${teacher1} = &lt;Teacher.Teacher object at 0x00000203B7B15D08&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.838" endtime="20220719 13:52:03.838"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${teacher1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220719 13:52:03.839" level="INFO">${teacher1} = &lt;Teacher.Teacher object at 0x00000203B7B15D08&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.839" endtime="20220719 13:52:03.839"/>
+</kw>
+<kw name="Create Teacher" library="Teacher">
+<var>${teacher2}</var>
+<arg>T2</arg>
+<arg>Neelima Mukerjee</arg>
+<arg>${subjectListB}</arg>
+<msg timestamp="20220719 13:52:03.840" level="INFO">${teacher2} = &lt;Teacher.Teacher object at 0x00000203B7B3AF48&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.840" endtime="20220719 13:52:03.840"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${teacher2}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220719 13:52:03.841" level="INFO">${teacher2} = &lt;Teacher.Teacher object at 0x00000203B7B3AF48&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.841" endtime="20220719 13:52:03.841"/>
+</kw>
+<kw name="Log Teacher To Console" library="Teacher">
+<arg>${teacher1}</arg>
+<status status="PASS" starttime="20220719 13:52:03.841" endtime="20220719 13:52:03.842"/>
+</kw>
+<kw name="Log Teacher To Console" library="Teacher">
+<arg>${teacher2}</arg>
+<status status="PASS" starttime="20220719 13:52:03.843" endtime="20220719 13:52:03.843"/>
+</kw>
+<kw name="appoint Teacher" library="School">
+<arg>${school}</arg>
+<arg>${teacher1}</arg>
+<status status="PASS" starttime="20220719 13:52:03.844" endtime="20220719 13:52:03.844"/>
+</kw>
+<kw name="appoint Teacher" library="School">
+<arg>${school}</arg>
+<arg>${teacher2}</arg>
+<status status="PASS" starttime="20220719 13:52:03.844" endtime="20220719 13:52:03.845"/>
+</kw>
+<kw name="End Testing" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing ends</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.845" endtime="20220719 13:52:03.846"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.845" endtime="20220719 13:52:03.846"/>
+</kw>
+<doc>with the of this test case we would check if we can create and add teachers to the school succesfully</doc>
+<tag>CREATION</tag>
+<status status="PASS" starttime="20220719 13:52:03.833" endtime="20220719 13:52:03.846"/>
+</test>
+<test id="s1-t4" name="TC4.Removing a student from the school" line="58">
+<kw name="Start Testing" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing begins</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.848" endtime="20220719 13:52:03.849"/>
+</kw>
+<kw name="create school" library="School">
+<var>${school}</var>
+<arg>Children's Academy</arg>
+<msg timestamp="20220719 13:52:03.849" level="INFO">${school} = &lt;School.School object at 0x00000203B7B57FC8&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.849" endtime="20220719 13:52:03.850"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${school.schoolName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.850" endtime="20220719 13:52:03.851"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.848" endtime="20220719 13:52:03.851"/>
+</kw>
+<kw name="get student list" library="School">
+<var>${studentList}</var>
+<arg>${school}</arg>
+<msg timestamp="20220719 13:52:03.852" level="INFO">${studentList} = [&lt;Student.Student object at 0x00000203B7B4C888&gt;, &lt;Student.Student object at 0x00000203B7B4C148&gt;]</msg>
+<status status="PASS" starttime="20220719 13:52:03.852" endtime="20220719 13:52:03.852"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${numberOfStudent}</var>
+<arg>${studentList}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220719 13:52:03.853" level="INFO">Length is 2</msg>
+<msg timestamp="20220719 13:52:03.853" level="INFO">${numberOfStudent} = 2</msg>
+<status status="PASS" starttime="20220719 13:52:03.852" endtime="20220719 13:52:03.853"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>number of students are :\t${numberOfStudent}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.853" endtime="20220719 13:52:03.854"/>
+</kw>
+<kw name="terminate student" library="School">
+<arg>${school}</arg>
+<arg>${student1}</arg>
+<status status="PASS" starttime="20220719 13:52:03.854" endtime="20220719 13:52:03.854"/>
+</kw>
+<kw name="get student list" library="School">
+<var>${studentList}</var>
+<arg>${school}</arg>
+<msg timestamp="20220719 13:52:03.855" level="INFO">${studentList} = [&lt;Student.Student object at 0x00000203B7B4C148&gt;]</msg>
+<status status="PASS" starttime="20220719 13:52:03.855" endtime="20220719 13:52:03.855"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${numberOfStudent}</var>
+<arg>${studentList}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220719 13:52:03.856" level="INFO">Length is 1</msg>
+<msg timestamp="20220719 13:52:03.856" level="INFO">${numberOfStudent} = 1</msg>
+<status status="PASS" starttime="20220719 13:52:03.855" endtime="20220719 13:52:03.856"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>number of students after one termination are :\t${numberOfStudent}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.856" endtime="20220719 13:52:03.857"/>
+</kw>
+<kw name="End Testing" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing ends</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.860" endtime="20220719 13:52:03.861"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.859" endtime="20220719 13:52:03.861"/>
+</kw>
+<doc>with the help of this test case we will try to check student terminating functionality</doc>
+<tag>DELETION</tag>
+<status status="PASS" starttime="20220719 13:52:03.847" endtime="20220719 13:52:03.862"/>
+</test>
+<test id="s1-t5" name="TC5.Removing a teacher from the school" line="72">
+<kw name="Start Testing" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing begins</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.864" endtime="20220719 13:52:03.865"/>
+</kw>
+<kw name="create school" library="School">
+<var>${school}</var>
+<arg>Children's Academy</arg>
+<msg timestamp="20220719 13:52:03.865" level="INFO">${school} = &lt;School.School object at 0x00000203B7B57A88&gt;</msg>
+<status status="PASS" starttime="20220719 13:52:03.865" endtime="20220719 13:52:03.865"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${school.schoolName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.865" endtime="20220719 13:52:03.866"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.864" endtime="20220719 13:52:03.866"/>
+</kw>
+<kw name="Get Teachers List" library="School">
+<var>${teachersList}</var>
+<arg>${school}</arg>
+<msg timestamp="20220719 13:52:03.867" level="INFO">${teachersList} = [&lt;Teacher.Teacher object at 0x00000203B7B15D08&gt;, &lt;Teacher.Teacher object at 0x00000203B7B3AF48&gt;]</msg>
+<status status="PASS" starttime="20220719 13:52:03.867" endtime="20220719 13:52:03.867"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${numberOfTeachers}</var>
+<arg>${teachersList}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220719 13:52:03.868" level="INFO">Length is 2</msg>
+<msg timestamp="20220719 13:52:03.868" level="INFO">${numberOfTeachers} = 2</msg>
+<status status="PASS" starttime="20220719 13:52:03.868" endtime="20220719 13:52:03.868"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>number of teachers are :\t${numberOfTeachers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.869" endtime="20220719 13:52:03.869"/>
+</kw>
+<kw name="Terminate Teacher" library="School">
+<arg>${school}</arg>
+<arg>${teacher1}</arg>
+<status status="PASS" starttime="20220719 13:52:03.870" endtime="20220719 13:52:03.870"/>
+</kw>
+<kw name="Get Teachers List" library="School">
+<var>${teachersList}</var>
+<arg>${school}</arg>
+<msg timestamp="20220719 13:52:03.871" level="INFO">${teachersList} = [&lt;Teacher.Teacher object at 0x00000203B7B3AF48&gt;]</msg>
+<status status="PASS" starttime="20220719 13:52:03.870" endtime="20220719 13:52:03.871"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${numberOfTeachers}</var>
+<arg>${teachersList}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220719 13:52:03.872" level="INFO">Length is 1</msg>
+<msg timestamp="20220719 13:52:03.872" level="INFO">${numberOfTeachers} = 1</msg>
+<status status="PASS" starttime="20220719 13:52:03.871" endtime="20220719 13:52:03.872"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>number of teachers after one termination are :\t${numberOfTeachers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.872" endtime="20220719 13:52:03.873"/>
+</kw>
+<kw name="End Testing" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing ends</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220719 13:52:03.875" endtime="20220719 13:52:03.876"/>
+</kw>
+<status status="PASS" starttime="20220719 13:52:03.874" endtime="20220719 13:52:03.876"/>
+</kw>
+<doc>with the help of this test case we will try to check teacher terminating functionality</doc>
+<tag>DELETION</tag>
+<status status="PASS" starttime="20220719 13:52:03.863" endtime="20220719 13:52:03.876"/>
+</test>
+<status status="PASS" starttime="20220719 13:52:03.777" endtime="20220719 13:52:03.878"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">CREATION</stat>
+<stat pass="2" fail="0" skip="0">DELETION</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="schoolAdminStructured">schoolAdminStructured</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220719 13:52:03.807" level="ERROR">Error in file 'C:\Users\NigamAr\Desktop\python test tasks\RobotFramework\Resources\resourceForSAS.robot' on line 2: Library 'School.py' does not exist.</msg>
+</errors>
+</robot>
